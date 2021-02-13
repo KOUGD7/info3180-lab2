@@ -10,7 +10,7 @@ from flask import render_template, request, redirect, url_for, flash
 import datetime
 
 def format_date_joined(date):
-    return date.strftime("%B, %Y")
+    return date.strftime("%b, %Y")
 
 ###
 # Routing for your application.
