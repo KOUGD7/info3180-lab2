@@ -3,32 +3,38 @@
 {% block main %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" />
-<img src="{{url_for('static', filename= 'profilepic.jpg')}}" alt="profile pic">
-<div>
-    <h1>{{ name }}</h1>
-    <p>@mgold</p>
-    <p>Kingston, Jamaica</p>
-    <p>Joined {{ join }}</p>
-</div>
-<div>
-    <p>I am smart and talented young man who loves 
-    website design and developement.Contact me if
-    you'd like to work together on a new project</p>
-
-    <div>
-        <div>
-            <p>7</p>
-            <p>Posts</p>
-        </div>
-        <div>
-            <p>777</p>
-            <p>Following</p>
-        </div>
-        <div>
-            <p>77</p>
-            <p>Followers</p>
-        </div>
+<div class = "profile">
+    <div class= "info">
+        <img src="{{url_for('static', filename= 'profilepic.jpg')}}" alt="profile pic" id = "profile-pic">
+        <h1>{{ name }}</h1>
+        <p>@mgold</p>
+        <p>Kingston, Jamaica</p>
+        <p>Joined {{ join }}</p>
     </div>
-    <button>Follow</button>
+    <div class = "bio">
+        <p>I am smart and talented young man who loves 
+        website design and developement. Contact me if
+        you'd like to work together on a new project</p>
+        
+        <div class= "interaction">
+            <div class = "follow">
+                <div class = "fd">
+                    <p class="fnum">7</p>
+                    <p>Posts</p>
+                </div>
+                <div class = "fd">
+                    <p class="fnum">777</p>
+                    <p>Following</p>
+                </div>
+                <div class = "fd">
+                    <p class="fnum">77</p>
+                    <p>Followers</p>
+                </div>
+                
+            </div>
+            <button class = "fbutton">Follow</button>
+        </div>
+        
+    </div>
 </div>
 {% endblock %}
